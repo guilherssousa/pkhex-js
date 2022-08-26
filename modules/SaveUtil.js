@@ -32,13 +32,13 @@ function getVariantSAVInternal(data) {
 
   switch (type) {
     case "XY":
-      sav.game = "XY";
+      sav.version = "XY";
       break;
     case "ORAS":
-      sav.game = "ORAS";
+      sav.version = "ORAS";
       break;
     case "ORASDEMO":
-      sav.game = "ORASDEMO";
+      sav.version = "ORASDEMO";
       break;
   }
 
