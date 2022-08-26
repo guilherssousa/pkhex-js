@@ -4,7 +4,7 @@ PKHeX reproduction in JavaScript for Node.JS with zero dependencies.
 
 It is not supposed to be a faithful implementation to the original design, but to learn how the software interacts with save files and how they work under the hood.
 
-## What can I do:
+## What it does:
 
 - [x] Check for the game version based on save.
 
