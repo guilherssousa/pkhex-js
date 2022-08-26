@@ -1,5 +1,7 @@
 /**
  * Only the needed implementation to a lookalike class of the FileInfo C# class.
+ *
+ * Original implementation: https://github.com/wshxbqq/io-info/blob/master/lib/FileInfo.ts
  */
 
 import fs from "fs";
