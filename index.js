@@ -4,10 +4,26 @@ import fs from "fs";
 import FileInfo from "./modules/FileInfo.js";
 import FileUtil from "./modules/FileUtil.js";
 
+function openSAV(sav, path) {
+  if (!sav.version) {
+    console.error(`Invalid save file version: ${path}`);
+    return true;
+  }
+}
+
+function loadFile(input, path) {
+  if (input == null) return false;
+
+  switch (input.type) {
+    case "sav":
+      return openSAV(input, path);
+  }
+}
+
 function openFile(input, type, ext) {
   var obj = FileUtil.getSupportedFile(input, ext);
 
-  console.log(obj);
+  if (obj != null && loadFile(obj, path)) return;
 }
 
 function openFromPath(path) {
