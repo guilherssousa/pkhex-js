@@ -26,20 +26,23 @@ function getSAVType(data) {
 function getVariantSAVInternal(data) {
   var type = getSAVType(data);
 
+  const sav = {
+    type: "sav",
+  };
+
   switch (type) {
     case "XY":
-      return {
-        type: "XY",
-      };
+      sav.game = "XY";
+      break;
     case "ORAS":
-      return {
-        game: "ORAS",
-      };
+      sav.game = "ORAS";
+      break;
     case "ORASDEMO":
-      return {
-        game: "ORASDEMO",
-      };
+      sav.game = "ORASDEMO";
+      break;
   }
+
+  return sav;
 }
 
 function getVariantSAV(data) {
